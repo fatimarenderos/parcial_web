@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1  Administrador de videojuegos
+  
+  form(action="/api/blog2", method='POST', name='formRegistro' class='formRegistro')
+    .formContenedor
+      input#marca(type="text", name="marca", placeholder='marca')
+      input#tipo(type="text", name="tipo", placeholder='tipo') 
+      input#consumo(type="text", name="consumo", placeholder='consumo')
+      input#eficiencia(type="text", name="eficiencia", placeholder='eficiencia')
+      input#enviar(type="submit", value="Guardar")
+
+  .contenedor
+    table
+      tr
+        th ID
+        th marca
+        th tipo
+        th consumo
+        th eficiencia
+        th Opcion
+      tbody.tablaALlenar
+    script(src="javascripts/main.js")
